@@ -1,20 +1,31 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Sweet Globe Bakery
 
-# Run and deploy your AI Studio app
+A bakery landing page built with React, TypeScript, Vite, Tailwind CSS, Motion, and Lucide icons. It presents pastries, bread, drinks, the bakery team, and location/contact information with animated sections and mobile navigation.
 
-This contains everything you need to run your app locally.
+## Run locally
 
-View your app in AI Studio: https://ai.studio/apps/63f14cc1-fdf9-4645-9e89-69c03262c529
+Use Node.js 22.12+ and npm:
 
-## Run Locally
+```sh
+npm install
+npm run dev
+```
 
-**Prerequisites:**  Node.js
+Open `http://localhost:3000`. The development script binds to all network interfaces.
 
+## Commands
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start Vite on port 3000 |
+| `npm run build` | Build the static site into `dist/` |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | TypeScript checking with `tsc --noEmit` |
+
+## Customize
+
+Edit `MENU_ITEMS`, `TEAM`, and section content in `src/App.tsx`. Styling is in `src/index.css`; the app starts in `src/main.tsx`.
+
+The current page does not call Gemini, so an AI API key is not needed for the bakery UI despite the inherited AI Studio environment template. There is no implemented ordering, payment, or database service. Publish `dist/` to a static host after building.
+
+No automated test script is included.
